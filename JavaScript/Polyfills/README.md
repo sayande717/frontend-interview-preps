@@ -279,9 +279,9 @@ console.log(obj.sum) //6
 console.log(obj.count) //3
 
 ```
-## Map
+## Array.map 
 
-Let`s see how to use map in Javascript
+Let`s see how to use `map` to iterate over an array in Javascript
 ```javascript
 map(callBackFn)
 
@@ -291,7 +291,7 @@ console.log(numList.map((num) => num * 2)); // 2 4 6 8 10
 
 //CallBackFn will receive 3 parameters
 /*
-1. Element of array
+1. Element of Array
 2. Index of the element
 3. Array itself
 */
@@ -315,7 +315,7 @@ const userFullNames = users.map(function(element){
 console.log(userFullNames);
 
 ```
-Let's use map method using other syntax
+Let's use the map method using other syntax
 ```javascript
 map(callBackfn,thisArg)
 
@@ -331,7 +331,7 @@ Now we are going to implement polyfill for the Map method
 ```Javascript
 Array.prototype.customMap = function (callbackFn, thisArg) {
   /*
-   this keyword is referring to an array on which customMap method is called 
+   this keyword refers to an array on which the customMap method is called 
   */
   if (!Array.isArray(this)) {
     throw new TypeError('customMap can only be called on an array');
@@ -339,7 +339,7 @@ Array.prototype.customMap = function (callbackFn, thisArg) {
   const arrayLength = this.length;
   let arr = [];
   for (let i = 0; i < arrayLength; i++) {
-    //check for non empty slots in an array
+    //check for non-empty slots in an array
     if (this[i]) {
       arr[i] = callbackFn.call(thisArg, this[i], i, this);
     }
