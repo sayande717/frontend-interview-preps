@@ -578,7 +578,7 @@ Properties declared inside the constructor method will be copied to every instan
 3.  When you call a method on an instance, JavaScript looks up the prototype chain to find the method in the prototype. It doesn't copy the method to the instance itself.
 4.  This behavior is what allows for memory-efficient sharing of methods among instances.
 
-**NOTE** We achieved the same in Constructor Function by defining the methods in the prototype of the constructor rather than directly defining inside it.
+**NOTE** We achieved the same in the Constructor Function by defining the methods in the prototype of the constructor rather than directly defining inside it.
 
 ## `this`
 
@@ -601,8 +601,9 @@ function myName() {
   let name = "Ish";
   console.log(this.name);
 }
-myName(); //This will refer to the global name Global Ish.
+myName(); // This will refer to the global name Global Ish.  
 ```
+NOTE: If we use `use strict`, the output will be undefined.
 
 3.  **Method Invocation**: When a function is called as a method of an object, "this" refers to the object that the method belongs to. In this case, "this" points to the object to the left of the dot when calling the method.
 
