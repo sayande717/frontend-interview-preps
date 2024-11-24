@@ -53,6 +53,11 @@ You can either contribute and resolve the issue yourself, or you can patiently a
 
 If you have any questions or need further assistance, feel free to reach out to me or open an issue.
 
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=ishwarrimal/frontend-interview-preparation&type=Date)](https://star-history.com/#ishwarrimal/frontend-interview-preparation&Date)
+
 ## Contributors ✨
 
 Thanks go to these wonderful people :
@@ -80,9 +85,6 @@ Thanks go to these wonderful people :
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=open-webui/open-webui&type=Date)](https://star-history.com/#open-webui/open-webui&Date)
 
 
 Happy coding! 🚀
