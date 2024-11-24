@@ -80,5 +80,9 @@ Thanks go to these wonderful people :
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=open-webui/open-webui&type=Date)](https://star-history.com/#open-webui/open-webui&Date)
+
 
 Happy coding! 🚀
