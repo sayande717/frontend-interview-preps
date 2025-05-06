@@ -176,13 +176,13 @@ NOTE: This varies slightly when it comes to the micro task queue (which is diffe
 
 ### Micro Task Queue
 
-As we read before, the event loop has to wait for the call stack to be empty before moving the tasks from the callback queue to the call stack.
+As we discussed earlier, the event loop waits for the current task on the call stack to finish before handling other queued tasks.
 
-While it works perfectly for most cases, for some this is not optimal. In some cases, we can not afford to wait for all the tasks in the call stack to complete before executing the async operation. Take an example of API calls, user would want to see the response as soon as the response is ready and not wait for other sync operations to get completed.
+Typically, asynchronous operations like setTimeout use the callback queue, and those tasks are picked up only after the call stack is clear. However, in some cases, we need finer control—such as when handling API responses or promise resolutions that should be processed immediately after the current execution completes, without waiting for the entire callback queue.
 
-Hence, for such cases, a different type of queue called Micro Task Queue or simply Micro Queue is used, which is different from a callback queue. Tasks in the microtask queue are prioritised by the JS Engine.
+This is where the microtask queue comes in. It handles tasks like Promise.then callbacks and MutationObserver callbacks, and it has higher priority than the callback queue. After the current task completes, the event loop first clears all tasks in the microtask queue before moving on to the next task from the callback queue.
 
-Instead of waiting for the entire synchronous operations on a call stack to complete, as soon as the current task in execution is completed, the task in the microtask queue gets prioritised and is moved to the call stack.
+This allows microtasks to run more promptly, even if other asynchronous tasks are queued up.
 
 ### Overall Execution steps:
 
