@@ -107,9 +107,9 @@ useEffect with or without dependencies are equivalent to `componentDidUpdate`. N
 
 useEffect with a list of dependencies is considered equivalent to `componentDidUpdate`. That is whenever the the dependency variable is updated, this effect gets triggered. (If dependency is omitted, the effect will run with every re-render)
 
-- _`ComponentDidUnmount`_
+- _`componentWillUnmount`_
 
-The return function placed inside a useEffect is considered equivalent to `componentDidUnmount`. That is whenever the component gets unmounted (removed) from the DOM, this method gets triggered.
+The return function placed inside a useEffect is considered equivalent to `componentWillUnmount`. That is whenever the component gets unmounted (removed) from the DOM, this method gets triggered.
 
 There is also an equivalent of `shouldComponentUpate` [readMore](https://github.com/ishwarrimal/frontend-interview-preps/tree/main/React/ReactInterview#purecomponents)
 
